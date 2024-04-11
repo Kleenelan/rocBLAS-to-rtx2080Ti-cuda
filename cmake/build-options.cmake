@@ -1,5 +1,5 @@
 # ########################################################################
-# Copyright (C) 2016-2023 Advanced Micro Devices, Inc. All rights reserved.
+# Copyright (C) 2016-2024 Advanced Micro Devices, Inc. All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -34,7 +34,8 @@ option( BUILD_SHARED_LIBS "Build rocBLAS as a shared library" ON )
 
 # Building tensile can add significant compile time; this option allows to build
 # library without tensile to allow for rapid iteration without GEMM functionality
-option( BUILD_WITH_TENSILE "Build full functionality which requires tensile?" ON )
+#LL:: option( BUILD_WITH_TENSILE "Build full functionality which requires tensile?" ON )
+option( BUILD_WITH_TENSILE "Build full functionality which requires tensile?" OFF )
 
 include(clients/cmake/client-build-options.cmake)
 
